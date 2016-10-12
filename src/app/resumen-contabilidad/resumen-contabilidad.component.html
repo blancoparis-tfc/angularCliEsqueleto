@@ -1,0 +1,12 @@
+<md-card>
+  <md-card-subtitle>Aqui tenemos toda nuestra situación contable, agrupada por mes</md-card-subtitle>
+  <md-card-title>La situación contable</md-card-title>
+  <md-card-content>
+    <p>Partimos del saldo inicial: <strong>{{saldo}} €</strong><p>
+    <md-list >
+      <md-list-item *ngFor="let mes of meses">
+        <p md-line> <strong>{{mes.mes}}</strong> {{mes.ingresos}}/{{mes.gastos}} = {{mes.saldo}} </p>
+      </md-list-item>
+    </md-list>
+  </md-card-content>
+</md-card>

@@ -1,6 +1,6 @@
 <md-sidenav-layout [class.m2app-dark]="isDarkTheme">
    <md-menu #menu="mdMenu">
-      <button md-menu-item routerLink="/inicio"  >Inicio</button>
+      <button md-menu-item routerLink="/resumen"  >Resumen</button>
       <button md-menu-item>Ejemplo 1</button>
       <button md-menu-item>Contacto</button>
    </md-menu>
@@ -9,8 +9,8 @@
     <button class="app-icon-button" [md-menu-trigger-for]="menu">
       <i class="material-icons app-toolbar-menu">menu</i>
     </button>
-    {{title}}
-    <span class="app-toolbar-filler"></span>
+    
+    <span class="app-toolbar-filler">{{title}}</span>
     <button md-button (click)="isDarkTheme = !isDarkTheme">Tema oscuro</button>
   </md-toolbar>
 
