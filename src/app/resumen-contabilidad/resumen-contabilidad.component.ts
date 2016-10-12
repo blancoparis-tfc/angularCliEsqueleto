@@ -13,13 +13,16 @@ export class ResumenContabilidadComponent implements OnInit {
   saldo:Number
 
   constructor(private resumenService:ResumenService) {
-    this.saldo = 10000 
-    this.meses=new Array<Resumen>();
-    resumenService.getResumenes().subscribe(resumenes=>{ this.meses=resumenes; } );
   }
 
+  getResumenes() {
+    this.saldo = 10000
+    this.meses = [];
+    this.resumenService.getResumenes().subscribe(resumenes=>{ this.meses=resumenes; } );
+  }
 
   ngOnInit() {
+    this.getResumenes()
   }
 
 }

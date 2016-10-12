@@ -30,6 +30,7 @@ describe('Component: ResumenContabilidad', () => {
   it('Mirar el saldo', inject([ResumenService], (resumenService: ResumenService)=> {
       let fixture = TestBed.createComponent(ResumenContabilidadComponent);
       let app = fixture.debugElement.componentInstance;
+      fixture.detectChanges();
       //console.info('APP',app.saldo);
       expect(app.saldo).toEqual(10000);
   }));
@@ -38,6 +39,7 @@ describe('Component: ResumenContabilidad', () => {
       crearRespuestaMockInMemory(mockBacked,new InMemoryResumenService(),"resumenes");
       let fixture = TestBed.createComponent(ResumenContabilidadComponent);
       let app = fixture.debugElement.componentInstance;
+      fixture.detectChanges();
       //console.info('APP',app.saldo);
       
       console.info('meses',app.meses);
@@ -50,6 +52,7 @@ describe('Component: ResumenContabilidad', () => {
       crearRespuestaMockInMemory(mockBacked,new InMemoryResumenService(),"resumenes");
       let fixture = TestBed.createComponent(ResumenContabilidadComponent);
       let app = fixture.debugElement.componentInstance;
+      //app.ngOnInit()
       fixture.detectChanges();
       assertText(fixture,'md-card md-card-subtitle','Aqui tenemos toda nuestra situación contable, agrupada por mes');
       assertText(fixture,'md-card md-card-title','La situación contable');
