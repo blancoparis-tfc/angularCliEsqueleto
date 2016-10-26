@@ -9,13 +9,15 @@ import {MaterialModule} from '@angular/material';
 import { InicioComponent } from './inicio/inicio.component'
 import {AppRoutingModule} from './app-routing.module';
 import { ResumenContabilidadComponent } from './resumen-contabilidad/resumen-contabilidad.component'
-import {InMemoryResumenService} from './in-memory/InMemoryResumenService'
+import {InMemoryResumenService} from './in-memory/InMemoryResumenService';
+import { ClienteFichaComponent } from './clientes/cliente-ficha/cliente-ficha.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     InicioComponent,
-    ResumenContabilidadComponent
+    ResumenContabilidadComponent,
+    ClienteFichaComponent
   ],
   imports: [
     BrowserModule,
